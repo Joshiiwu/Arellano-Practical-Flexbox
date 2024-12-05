@@ -1,250 +1,271 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        * { 
-            padding: 0px;
-            margin: 0px;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            margin: 4px;
-        }
-
-        nav {
-            border: 1px solid black;
-            display: flex;
-            flex-direction: row;
-            gap: 4px;
-            padding: 4px;
-            justify-content: space-between;
-        }
-
-        .nav1 {
-            display: flex;
-            flex-direction: row;
-            gap: 4px;
-            align-items: center;
-        }
-
-        .navi {
-            display: flex;
-            background-color: red;
-            height: 35px;
-            width: 35px;
-        }
-
-        .nav2 {
-            display: flex;
-            gap: 4px;
-            align-items: center;
-        }
-
-        .navz {
-            display: flex;
-            background-color: red;
-            height: 25px;
-            width: 60px;
-        }
-
-        main {
-            border: 1px solid black;
-            display: flex;
-            flex-direction: row;
-            padding: 4px;
-            gap: 4px;
-        }
-
-        .main1 {
-            display: flex;
-            border: 1px solid black;
-            gap: 4px;
-            padding: 8px;
-            width: 659px;
-            height: 625px;
-        }
-
-        .min {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            height: 200px;
-            gap: 4px;
-        }
-        .mini1 {
-            display: flex;
-            border: 1px solid black;
-            width: 90px;
-            height: 90px;    
-        }
-
-        .main2 {
-            display: flex;
-            flex-direction: row;
-            border: 1px solid black;
-            width: 659px;
-            margin-left: 4px;
-            padding: 8px;
-            justify-content: space-around;
-        }
-
-        .mini2 {
-            border: 1px solid black;
-            width: 200px;
-            height: 140px;
-            margin-bottom: 4px;
-        }
-
-        .main3 {
-            display: flex;
-            flex-direction: column;
-            border: 1px solid black;
-            padding: 4px;
-            gap: 4px;
-        }
-
-        .mini3 {
-            display: flex;
-            border: 1px solid black;
-            height: 25px;
-            width: 200px;
-        }
-
-        footer {
-            display: flex;
-            flex-direction: column;
-            border: 1px solid black;
-            padding: 4px;
-        }
-
-        .foot1 {
-           display: flex;
-           gap: 4px;
-        }
-
-        .ff1 {
-            background-color: red;
-            width: 35px;
-            height: 35px;
-            margin-bottom: 3px;
-        }
-
-        .ff2 {
-            display: flex;
-            align-items: center;
-        }
-
-        .foot2 {
-            display: flex;
-            background-color: black;
-            width: 1579px;
-            height: 1px;
-            margin: 4px;
-        }
-
-        .foot3 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .footz {
-            display: flex;
-            flex-direction: row;
-            gap: 4px;
-            margin-top: 4px ;
-        }
-
-        .fz {
-            display: flex;
-            background-color: red;
-            height: 18px;
-            width: 18px;
-        }
-
-      
-    </style>
+    <title>ArellanoFlexbox8</title>
 </head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        padding: 4px;
+        height: calc(100vh - 8px);
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+    }
+
+    nav,
+    main,
+    aside,
+    footer {
+        border: 1px solid black;
+        padding: 4px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hey {
+        display: flex;
+        align-items: center;
+        margin: 2px;
+        gap: 2px;
+    }
+
+    .navboxone {
+        background-color: red;
+        height: 40px;
+        width: 40px;
+    }
+
+    .navt {
+        display: flex;
+        gap: 2px;
+        margin: 2px;
+    }
+
+    .navtwoboxes {
+        background-color: red;
+        height: 30px;
+        width: 50px;
+    }
+
+    .middle {
+        display: flex;
+        gap: 4px;
+        flex-grow: 1;
+
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        gap: 4px;
+    }
+
+
+    .namo {
+        display: flex;
+        flex-grow: 1;
+    
+    }
+
+    .middlefirst {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        flex-grow: 1;
+        width: 50%;
+        border: 1px solid black;
+    }
+
+    .middlefirstboxes1 {
+        border: 1px solid black;
+        height: 150px;
+        width: 180px;
+        margin: 2px;
+
+    }
+
+    .middlefirstboxes2 {
+        border: 1px solid black;
+        height: 150px;
+        width: 180px;
+        margin: 2px;
+
+    }
+
+
+    .middlesecond {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        width: 50%; 
+        gap: 4px;
+        padding: 4px;
+        border: 1px solid black;
+    }
+
+    .middlesecondboxes {
+        border: 1px solid black;
+        height: 80px;
+        width: 80px;
+
+
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .asideboxes {
+        border: 1px solid black;
+        margin: 2px;
+        height: 35px;
+        width: 15vw;
+    }
+
+    .footerfirst {
+        display: flex;
+        gap: 2px;
+        margin: 4px;
+        align-items: center;
+    }
+
+    .footerbox {
+        background-color: red;
+        height: 40px;
+        width: 40px;
+    }
+
+    .footersecond {
+        display: flex;
+        gap: 2px;
+        margin: 4px;
+        border: 1px solid rgb(103, 100, 100);
+    }
+
+    .footerboxes {
+        display: flex;
+        gap: 4px;
+        justify-content: center;
+    }
+
+    .footercubes {
+        background-color: red;
+        height: 25px;
+        width: 25px;
+    }
+
+    .footercopyright {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
 <body>
+
+
+
     <nav>
-        <div class="nav1">
-            <div class="navi"></div>
-            <div class="navu">FLEXBOX</div>
+        <div class="hey">
+            <div class="navboxone"></div>
+            <div class="navflexbox">Flexbox</div>
         </div>
-        <div class="nav2">
-            <div class="navz"></div>
-            <div class="navz"></div>
+        <div class="navt">
+            <div class="navtwoboxes"></div>
+            <div class="navtwoboxes"></div>
         </div>
     </nav>
 
-    <main>
-        <div class="main1">
-            <div class="min">
-            <div class="mini1"></div>
-            <div class="mini1"></div>
-            <div class="mini1"></div>
-            <div class="mini1"></div>
-            <div class="mini1"></div>
-            <div class="mini1"></div>
-            <div class="mini1"></div>
-            <div class="mini1"></div>
-            <div class="mini1"></div>
-            <div class="mini1"></div>
-            <div class="mini1"></div>
-            <div class="mini1"></div>
-            <div class="mini1"></div>
-            <div class="mini1"></div>
-            <div class="mini1"></div>
-        </div>
+    <div class="middle">
+        <main>
+
+            <div class="middlesecond">
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+                <div class="middlesecondboxes"></div>
+            </div>
+
+            <div class="namo">
+                <div class="middlefirst">
+                    <div class="middleboxes1">
+                        <div class="middlefirstboxes1"></div>
+                        <div class="middlefirstboxes1"></div>
+                    </div>
+                    <div class="middleboxes2">
+                        <div class="middlefirstboxes2"></div>
+                        <div class="middlefirstboxes2"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside>
+            <div class="asideboxes"></div>
+            <div class="asideboxes"></div>
+            <div class="asideboxes"></div>
+            <div class="asideboxes"></div>
+            <div class="asideboxes"></div>
+            <div class="asideboxes"></div>
+            <div class="asideboxes"></div>
+            <div class="asideboxes"></div>
+            <div class="asideboxes"></div>
+            <div class="asideboxes"></div>
+        </aside>
     </div>
-        <div class="main2">
-            <div class="m2">
-            <div class="mini2"></div>
-            <div class="mini2"></div>
-            </div>
-            <div class="m2">
-            <div class="mini2"></div>
-            <div class="mini2"></div>
-            </div>
-        </div>
-        <div class="main3">
-            <div class="mini3"></div>
-            <div class="mini3"></div>
-            <div class="mini3"></div>
-            <div class="mini3"></div>
-            <div class="mini3"></div>
-            <div class="mini3"></div>
-            <div class="mini3"></div>
-            <div class="mini3"></div>
-            <div class="mini3"></div>
-            <div class="mini3"></div>
-        </div>
-    </main>
 
     <footer>
-        <div class="foot1">
-            <div class="ff1"></div>
-            <div class="ff2">FLEXBOX</div>
-        </div>
-        <div class="foot2"></div>
-        <div class="foot3">
-            <div class="footz">
-                <div class="fz"></div>
-                <div class="fz"></div>
-                <div class="fz"></div>
-                <div class="fz"></div>
-                <div class="fz"></div>
-            </div>
-            <div class="foots">©Copyright All rights reserved.</div>
+        <div class="footerfirst">
+            <div class="footerbox"></div>
+            <div class="footerflexbox">Flexbox</div>
         </div>
 
+        <div class="footersecond"></div>
+
+        <div class="footerthird">
+            <div class="footerboxes">
+                <div class="footercubes"></div>
+                <div class="footercubes"></div>
+                <div class="footercubes"></div>
+                <div class="footercubes"></div>
+                <div class="footercubes"></div>
+            </div>
+
+            <div class="footercopyright">©Copyrights All rights reserved</div>
+        </div>
     </footer>
-    
+
+
+
 </body>
+
 </html>
