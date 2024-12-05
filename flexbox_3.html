@@ -1,240 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 4px;
+            gap: 4px;
+        }
 
-  <title>ArellanoFlexbox3</title>
-  
-  <style>
-    * {
-      margin: 0px;
-      padding: 0px;
-    }
-    
-    body {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      padding: 5px;
-      height: calc(100vh - 10px);
-    }
-    
-    nav, main, aside, footer {
-      border: 1px solid black;
-    }
-    
-    nav {
-      display: flex;
-      justify-content: space-between;
-      gap: 4px;
-      padding: 4px;
-    }
-    
-    .navcont1 {
-      display: flex;
-      justify-content: space-between;
-      gap: 5px;
-      align-items: center;
-    }
-    
-    .navcont2 {
-      display: flex;
-      gap: 5px;
-      align-items: center;
-    }
-    
-    .navredbox {
-      background-color: red;
-      height: 30px;
-      width: 30px;
-    }
-    
-    .navbigbox {
-      background-color: red;
-      height: 30px;
-      width: 60px;
-    }
-    
-    .container {
-      display: flex;
-      gap: 5px;
-      flex-grow: 1;
-    }
-    
-    main {
-      display: flex;
-      flex-grow: 1;
-      gap: 5px;
-      padding: 5px;
-      flex-direction: row;
-      justify-content: flex-start;
-    }
-    
-    .maincont1, .maincont2 {
-      border: 1px solid black;
-    }
-    
-    .maincont1 {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      gap: 5px;
-      padding: 5px;
-    }
-    
-    .main1items {
-      border: 1px solid black;
-      height: 30px;
-      width: 15vw;
-    }
-    
-    .maincont2 {
-      display: flex;
-      flex-grow: 2;
-      flex-wrap: wrap;
-      flex-direction: row;
-      gap: 5px;
-      padding: 10px;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .main2items {
-      border: 1px solid black;
-      height: 200px;
-      width: 80px;
-    }
-    
-    aside {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      gap: 5px;
-      padding: 4px;
-    }
-    
-    .asideitem {
-      display: flex;
-      flex-grow: 1;
-      border: 1px solid black;
-      height: 25px;
-      width: 15vw;
-    }
-    
-    footer {
-      display: flex;
-      flex-direction: column;
-      padding: 4px;
-    }
-    
-    .footer1 {
-      display: flex;
-      gap: 4px;
-      padding: 4px;
-      align-items: center;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    
-    .footercont1 {
-      display: flex;
-      gap: 5px;
-      align-items: center;
-    }
-    
-    .footer1redbox {
-      background-color: red;
-      height: 40px;
-      width: 40px;
-    }
-    
-    .footer2 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 4px;
-      padding: 4px;
-    }
-    
-    .footercont2 {
-      display: flex;
-      gap: 5px;
-    }
-    
-    .footer2boxes {
-      display: flex;
-      flex-direction: row;
-      gap: 4px;
-    }
-    
-    .footer2redbox {
-      background-color: red;
-      height: 20px;
-      width: 20px;
-    }
-  </style>
+        nav {
+            display: flex;
+            flex-direction: row;
+            border: 1px solid black;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .rednav {
+            background-color: red;
+            width: 35px;
+            height: 35px;
+            margin: 4px;
+        }
+
+        .ngroup {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .navred {
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+            align-items: center;
+            margin: 4px;
+        }
+
+        .reds {
+            background-color: red;
+            width: 50px;
+            height: 30px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            
+        }
+
+        .main1 {
+            border: 1px solid black;
+            height: 695px;
+        }
+
+        .m1box {
+            border: 1px solid black;
+            height: 35px;
+            width: 220px;
+            margin: 4px;
+        }
+
+        .main2 {
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+            width: 1200px;
+            margin-left: 4px;
+            justify-content: center;
+            align-items: center;
+            height: 695px;
+        }
+
+        .m2box {
+            border: 1px solid black;
+            width: 75px;
+            height: 195px;
+            align-items: center
+        }
+
+        .main3 {
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            gap: 4PX;
+            margin-left: 4px;
+            padding: 4PX;
+          
+        }
+
+        .m3box {
+            border: 1px solid black;
+            width: 220px;
+            height: 224px;
+        }
+
+        footer {
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            padding: 4px;
+        }
+
+        .fred {
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+
+        .footred {
+            background-color: red;
+            width: 18px;
+            height: 16px;
+        }
+
+        .fflex {
+            display: flex;
+            justify-content: center;
+        }
+
+
+    </style>
 </head>
-
-<body>  
-<nav>
-  <div class="navcont1">
-    <div class="navredbox"></div>
-    <div>FLEXBOX</div>
-  </div>
-  
-  <div class="navcont2">
-    <div class="navbigbox"></div>
-    <div class="navbigbox"></div>
-    <div class="navbigbox"></div>
-    <div class="navbigbox"></div>
-  </div>
-</nav>
-
-<div class="container">
-  <main>
-    <div class="maincont1">
-      <div class="main1items"></div>
-      <div class="main1items"></div>
-      <div class="main1items"></div>
-      <div class="main1items"></div>
-      <div class="main1items"></div>
-      <div class="main1items"></div>
-      <div class="main1items"></div>
-      <div class="main1items"></div>
-      <div class="main1items"></div>
-      <div class="main1items"></div>
+<body>
+    <nav>
+    <div class="ngroup">
+        <div class="rednav"></div>
+        <div class="flexnav">FLEXBOX</div>
     </div>
+    <div class="navred">
+        <div class="reds"></div>
+        <div class="reds"></div>
+        <div class="reds"></div>
+        <div class="reds"></div>
+    </div>
+    </nav>
+
+    <main>
+        <div class="main1">
+            <div class="m1box"></div>
+            <div class="m1box"></div>
+            <div class="m1box"></div>
+            <div class="m1box"></div>
+            <div class="m1box"></div>
+            <div class="m1box"></div>
+            <div class="m1box"></div>
+            <div class="m1box"></div>
+            <div class="m1box"></div>
+            <div class="m1box"></div>
+        </div>
+        <div class="main2">
+            <div class="m2box"></div>
+            <div class="m2box"></div>
+            <div class="m2box"></div>
+            <div class="m2box"></div>
+            <div class="m2box"></div>
+            <div class="m2box"></div>
+        </div>
+        <div class="main3">
+            <div class="m3box"></div>
+            <div class="m3box"></div>
+            <div class="m3box"></div>
+        </div>
+    </main>
     
-    <div class="maincont2">
-      <div class="main2items"></div>
-      <div class="main2items"></div>
-      <div class="main2items"></div>
-      <div class="main2items"></div>
-      <div class="main2items"></div>
-      <div class="main2items"></div>
+    <footer>
+    <div class="fred">
+        <div class="footred"></div>
+        <div class="footred"></div>
+        <div class="footred"></div>
+        <div class="footred"></div>
+        <div class="footred"></div>
     </div>
-  </main>
-  <aside>
-    <div class="asideitem"></div>
-    <div class="asideitem"></div>
-    <div class="asideitem"></div>
-  </aside>
-</div>
+    <div class="fflex">
+        Copyright Flexbox
+    </div>
 
-<footer>
- <div class="footer2">
-  <div class="footer2boxes">
-    <div class="footer2redbox"></div>
-    <div class="footer2redbox"></div>
-    <div class="footer2redbox"></div>
-    <div class="footer2redbox"></div>
-  </div>
-  
-  <div>Copyright Flexbox</div>
- </div>
-</footer>
+    </footer>
 </body>
 </html>
